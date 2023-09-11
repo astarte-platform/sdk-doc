@@ -1,0 +1,48 @@
+# Copyright 2024 SECO Mind Srl
+#
+# SPDX-License-Identifier: CC0-1.0
+
+name: Documentation build (HTML)
+
+on: [workflow_call]
+
+jobs:
+  doc-build-html:
+    name: "Documentation build (HTML)"
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    concurrency:
+      group: doc-build-html-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+    - name: Checkout SDK documentation
+      uses: actions/checkout@v4
+      with:
+        path: sdk-doc
+    # - name: Checkout Astarte device SDK Python
+    #   uses: actions/checkout@v4
+    #   with:
+    #     repository: astarte-platform/astarte-device-sdk-python
+    #     path: astarte-device-sdk-python
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.11
+    - name: Install Python dependencies
+      run: pip install -r requirements.txt
+      working-directory: ./sdk-doc
+    - name: Create empty directories
+      run: |
+        mkdir ./source/_static
+        mkdir ./source/_templates
+      working-directory: ./sdk-doc
+    # - name: Move get started markdown files from repo
+    #   run: |
+    #     mv ./astarte-device-sdk-python/get_started.md ./sdk-doc/python_get_started.md
+    - name: Build HTML documentation
+      run: make html
+      working-directory: ./sdk-doc
+    - uses: actions/upload-artifact@v4
+      with:
+        name: html-doc
+        path: ./sdk-doc/build/html
