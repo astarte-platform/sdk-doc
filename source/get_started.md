@@ -24,6 +24,6 @@ get_started/cpp_qt5.md
 get_started/elixir.md
 get_started/go.md
 get_started/java_android.md
-Get started with Python <get_started/python_get_started.md>
+get_started/get_started_python.md
 get_started/rust.md
 ```
