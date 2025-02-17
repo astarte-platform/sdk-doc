@@ -10,7 +10,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Astarte SDKs'
+project = 'Clea Astarte SDKs'
 copyright = '2024 SECO Mind Srl'
 author = 'Simone Orru'
 release = ''
@@ -30,6 +30,7 @@ myst_heading_anchors = 3
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "furo"
-html_title = f"{project} documentation"
+html_title = f"{project}"
+html_logo="_static/clea_bw_100x100.svg"
 html_static_path = ['_static']
-html_favicon = '_static/clea_bw.png'
+html_favicon = '_static/clea_bw_16x16.svg'
