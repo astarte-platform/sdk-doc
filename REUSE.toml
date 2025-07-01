@@ -5,3 +5,15 @@
 version = 1
 SPDX-PackageName = "Astarte Device SDKs documentation"
 SPDX-PackageDownloadLocation = "https://github.com/astarte-platform/sdk-doc"
+
+[[annotations]]
+path = "source/_static/*.svg"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SECO Mind Srl"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = "source/_static/*.png"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SECO Mind Srl"
+SPDX-License-Identifier = "CC0-1.0"
