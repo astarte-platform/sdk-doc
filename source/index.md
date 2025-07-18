@@ -24,12 +24,16 @@ rapid development and a pleasant developer experience.
 
 ## Transport layer
 
+### MQTT
+
 The traditional way for an Astarte device to connect to an Astarte cloud instance is by implementing
 the [Astarte MQTT v1 Protocol](https://docs.astarte-platform.org/astarte/latest/080-mqtt-v1-protocol.html).
 Using this protocol each SDK device connects directly to Astarte cloud. This is ideal when interaction
 with Astarte is performed by a single application contained within a single hardware device.
 
 ![Astarte device direct MQTT architecture](_static/transport_mqtt_direct.png)
+
+### gRPC
 
 An additonal use case is when multiple hardware device or software services share the same network
 connection and should interact with Astarte in an independent manner.
@@ -65,7 +69,7 @@ Further languages and platforms will be supported in the near future.
 
 ## Notes
 
-Astarte Device SDKs should not be confused with client SDKs, as they are not meant for client to
-device communications. If one is interested in an abstraction layer on top of existing APIs instead,
-an optional Astarte Client SDK (such as
+Astarte device SDKs should not be confused with Astarte clients, as they are not meant for
+communication with the Astarte REST APIs. If one is interested in an abstraction layer on top of the
+existing Astarte REST APIs instead, an optional Astarte client (such as
 [astarte-go](https://github.com/astarte-platform/astarte-go) ) is to be used.
