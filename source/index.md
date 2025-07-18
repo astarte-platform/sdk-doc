@@ -58,7 +58,7 @@ At the moment the following SDKs are available:
 | **Go** |  | MQTT | [GitHub](https://github.com/astarte-platform/astarte-device-sdk-go) | [API docs](https://pkg.go.dev/github.com/astarte-platform/astarte-device-sdk-go) | [Get started](get_started/go.md) |
 | **Java** | Android/Generic  | MQTT | [GitHub](https://github.com/astarte-platform/astarte-device-sdk-java) | [API docs](https://docs.astarte-platform.org/device-sdks/java/latest/api/) | [Get started](get_started/java_android.md) |
 | **Python** |  | MQTT + gRPC | [GitHub](https://github.com/astarte-platform/astarte-device-sdk-python) | [API docs](https://docs.astarte-platform.org/device-sdks/python/latest/api/) | [Get started](get_started/python.md) |
-| **Rust** |  | MQTT + gRPC | [GitHub](https://github.com/astarte-platform/astarte-device-sdk-rust) | [API docs](https://docs.rs/astarte-device-sdk/latest/astarte_device_sdk/) | [Get started](get_started/rust.md) |
+| **Rust** | std | MQTT + gRPC | [GitHub](https://github.com/astarte-platform/astarte-device-sdk-rust) | [API docs](https://docs.rs/astarte-device-sdk/latest/astarte_device_sdk/) | [Get started](get_started/rust.md) |
 
 Further languages and platforms will be supported in the near future.
 [Requests for new SDKs](https://github.com/astarte-platform/astarte/issues) are welcome.
